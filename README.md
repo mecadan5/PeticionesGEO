@@ -146,28 +146,28 @@ Nivel de confiabilidad y cómo se garantizará:
   
 Una vez instalado Docker Desktop ejecutar las siguientes líneas por consola:
 - **Instalación de Red para el proyecto:**
-  docker network create cencosud
+  > - docker network create cencosud
 - **Instalación de base de datos SQL (Finalmente no se usa, ya que se utiliza como base de datos SQL Postgress):** 
-  docker run --name mysql-container --network cencosud -e MYSQL_ROOT_PASSWORD=javeriana -d mysql
-  docker exec -it mysql-container bash 
-  mysql -u root -p javeriana
+  > - docker run --name mysql-container --network cencosud -e MYSQL_ROOT_PASSWORD=javeriana -d mysql 
+  > - docker exec -it mysql-container bash 
+  > - mysql -u root -p javeriana
 - **Instalación de base de datos postgis:** 
-  docker run -d --name postgis-container --network=cencosud -e POSTGRES_PASSWORD=javeriana -e POSTGRES_DB=flightradar -p 5432:5432 postgis/postgis
-  docker run -d --name pgadmin-container -p 8080:80 --network=cencosud -e PGADMIN_DEFAULT_EMAIL=admin@gmail.com -e PGADMIN_DEFAULT_PASSWORD=pgadmin_password dpage/pgadmin4
+  > - docker run -d --name postgis-container --network=cencosud -e POSTGRES_PASSWORD=javeriana -e POSTGRES_DB=flightradar -p 5432:5432 postgis/postgis
+  > - docker run -d --name pgadmin-container -p 8080:80 --network=cencosud -e PGADMIN_DEFAULT_EMAIL=admin@gmail.com -e PGADMIN_DEFAULT_PASSWORD=pgadmin_password dpage/pgadmin4
 **Credenciales de Acceso pgadmin**
-  http://localhost:8080/browser/
-  admin@gmail.com
-  pgadmin_password
+  > - http://localhost:8080/browser/
+  > - admin@gmail.com
+  > - pgadmin_password
 
 - **Instalación de base de datos CromaDB:** 
-  docker run -d --name chroma-container -p 8000:8000 --network=cencosud chromadb/chroma
+  > - docker run -d --name chroma-container -p 8000:8000 --network=cencosud chromadb/chroma
 **Acceso**
-  http://localhost:8000/api/v1
+  > - http://localhost:8000/api/v1
 
 - **Instalación Jupyter notebook (Python):**
-  docker run -it --rm --name jupyter-container --network cencosud -p 8888:8888 jupyter/datascience-notebook
+  > - docker run -it --rm --name jupyter-container --network cencosud -p 8888:8888 jupyter/datascience-notebook
 **Acceso**
-   http://localhost:8888/lab?token=2d3616a43c711dacb004bb3692cd0a949f14f964bf5b8f25
+   > - http://localhost:8888/lab?token=2d3616a43c711dacb004bb3692cd0a949f14f964bf5b8f25
 ## Uso del Proyecto
 
 - **Guía de Usuario:** Instrucciones sobre cómo usar el proyecto.
