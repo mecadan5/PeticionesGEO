@@ -214,7 +214,11 @@ Una vez instalado Docker Desktop ejecutar las siguientes líneas por consola:
   
 ## Mantenimiento y Soporte
 - **Guía de Mantenimiento:** Procedimientos y mejores prácticas para mantener el sistema.
+   
 - **Soporte:** Cómo obtener ayuda y soporte para el proyecto.
+  Para este punto montamos todos los componentes del proyecto en una maquina virtual y a la misma le fue montado monitoreo en linea con NAGIOS las alarmas llegan por telegram e   indica posibles picos o caidas de los servicios, ahora bien se dejo configurado toma de snap shopt  en horarios fijos diarios para garantizar una ultima copia y en caso de  fallas   generar volver a un estado anterior, para esto guarda las ultimas 3 copias mas recientes.
+  La maquina esta alojada en un data center en nube con un proveedor que posee compromiso de 99.5 de servicio y sla de domingo a domingo en caso de ser necesario.
+  anexamos los datos de IP 63.141.238.133 uadmin password no se indica por tema de seguridad
 
 ## Contribuciones
 - **Guía de Contribución:** Las pautas de contribución se encuentran en la raíz del repositorio `\main\CONTRIBUTING`, 
